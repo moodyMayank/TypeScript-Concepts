@@ -10,6 +10,16 @@
 - This file includes a lot of settings , we will use according to our need.
 
 - We need to following points :
-  - rootDir
-  - outDir
-  -
+  - rootDir : place for typescript files
+  - outDir : place for javascript files
+  - Command : tsc -w , it picks all the files under rootDir
+  - Now also the files are using ES6 since `target:ES2016` in tsconfig file.
+  - If we change it back to `ES5` , it will shift to older version.
+
+Note: If we delete any typescript file , the js file will not be deleted automatically and we have to that manually.
+
+- Files outside `src` folder are considered and converted to js file but not in the desired path i.e. `build/js`.
+  - We want to ignore this to happen , so we add another feature in tsconfig file `"include": [
+"src"
+]`
+  - So now typescript all the files except `src` folder.
