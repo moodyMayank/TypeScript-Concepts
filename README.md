@@ -9,3 +9,8 @@
   - boolean
   - any
   - union
+
+## Settings :-
+
+- compilerOptions :-
+  - strict : true
